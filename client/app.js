@@ -3,7 +3,7 @@ app.run(function ($rootScope, $cookies, $location, Notification, $http, $session
     moment.locale('pl');
     $rootScope.testvariable = 'No witam Cie z rootscope';
     $rootScope.loggedUser = {};
-    $rootScope.hostname = 'typerms.atthost24.pl';
+    $rootScope.hostname = 'wc2018.pskowron.ski';
     $rootScope.isLogged = function () {
         const logged = $sessionStorage.get('auth');
         if (logged) {

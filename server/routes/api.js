@@ -10,7 +10,7 @@ const salt = bcrypt.genSaltSync(10);
 const promise = require('promise');
 const mail = require('./activate');
 const rand = require("random-key");
-const hostname = 'typerms.atthost24.pl';
+const hostname = 'wc2018.pskowron.ski';
 
 addUser = function (content) {
   return new promise(function(res, rej){
