@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class="col-12">
+            <h1>Sprawdź jak typowali inni użytkownicy!</h1>
+            <h2>Lista przedstawia wszystkie typowania w serwisie, porównaj swoje wyniki ze znajomymi!</h2>
+            <h2><strong>Ranking na podstawie tabel grupowych po 2. kolejce</strong></h2>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-6 offset-3">
+            <div class="row allpredictions-header">
+                <div class="col-1">Msc</div>
+                <div class="col-4">Login</div>
+                <div class="col-4">Zwycięzca</div>
+                <div class="col-1">1 Etap</div>
+                <div class="col-1">2 Etap</div>
+                <div class="col-1">Razem</div>
+            </div>
+        </div>
+    </div>
+    <div ng-repeat="value in predictions" class="row">
+        <div class="col-6 offset-3">
+            <div class="row allpredictions-child">
+                <div class="col-1">{{$index + 1}}</div>
+                <div class="col-4"><a href="{{'http://' + hostname + '/user/' + value.username}}">{{value.username}}</a> </div>
+                <div class="col-4"><img class="allpredictions-flag" ng-src="../assets/flags/{{winners[value.index-1].code}}.png">{{winners[value.index-1].name}} </div>
+                <div class="col-1">{{value.groupPoints}}</div>
+                <div class="col-1">{{value.cupPoints}}</div>
+                <div class="col-1">{{value.groupPoints + value.cupPoints}}</div>
+            </div>
+        </div>
+    </div>
+</div>

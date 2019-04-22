@@ -1,0 +1,296 @@
+.mypredictions-group-table {
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 50px;
+    color: #252525;
+}
+
+.mypredictions-group-bottom img{
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.mypredictions-group-name {
+    background-color: #b4a97b;
+    border: 5px solid #b4a97b;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.mypredictions-group-table-header {
+    font-size: 14px;
+    background-color: #b4a97b;
+    border-left: 7px solid #b4a97b;
+    border-right: 7px solid #b4a97b;
+    color: white;
+    text-align: left;
+    padding: 0 7px 0 7px;
+}
+
+.mypredictions-group-table-first {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 7px 10px;
+    border-bottom: 1px #c5c5c5 solid;
+    background-color: #023684;
+    color: white;
+}
+
+.mypredictions-group-table-second {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 7px 10px;
+    border-bottom: 1px #c5c5c5 solid;
+    background-color: #1569b5;
+    color: white;
+}
+
+
+.mypredictions-flag {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+
+.mypredictions-flag-b {
+    height: 60px;
+    width: 60px;
+    margin-right: 5px;
+}
+
+
+.mypredictions-cup-quater {
+    margin-top: 100px;
+}
+
+.mypredictions-cup-quater2 {
+    padding-bottom: 172px;
+}
+
+.mypredictions-cup-semi {
+    margin-top: 240px;
+}
+
+.mypredictions-cup-semi2 {
+    padding-bottom: 460px;
+}
+
+.mypredictions-cup-final {
+    margin-top: 525px;
+}
+
+.mypredictions-minus {
+    margin-top: -110px;
+}
+
+.link-box {
+    margin-top: 50px;
+}
+
+.link-box button{
+    border: 2px solid var(--main-blue);
+    background-color: white;
+    color: var(--main-blue);
+    padding: 15px 30px;
+    margin: -10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-transition: background-color 400ms; /* Safari */
+    transition: background-color 400ms;
+}
+
+.link-box button:hover{
+    background-color: var(--main-blue);
+    color: white;
+    text-decoration: none;
+}
+
+.mypredictions-delete button {
+    background-color: #f9f9f9;
+    border: 1px red solid;
+    color: red;
+    padding: 10px 20px;
+    margin: 0 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition: background-color 400ms, color 400ms;/* Safari */
+    transition: background-color 400ms, color 400ms;
+}
+
+.mypredictions-delete button:hover {
+    background-color: red;
+    color: white;
+}
+
+.mypredictions-delete span {
+    color: var(--main-blue);
+    font-size: 20px;
+}
+
+.mypredictions-group-title {
+    font-size: 30px;
+    color: #b4a97b;
+    font-weight: bold;
+}
+
+@media (min-width: 1200px) {
+    .mypredictions-cup-team {
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0 20px;
+        padding-top: 2px;
+        color: #171717;
+        position: relative;
+        z-index: 1;
+    }
+
+    .mypredictions-cup-team:before {
+        background-color: #fefef5;
+        box-shadow: 10px 5px 25px #888888;
+        position: absolute;
+        z-index: -1;
+        width: 90%;
+        height: 60%;
+        top:20%;
+        left:6%;
+        content:"";
+    }
+
+    .mypredictions-cup-team:after {
+        position: absolute;
+        z-index: -1;
+        width: 80%;
+        height: 60%;
+        top:20%;
+        left:21%;
+        content:"";
+        border-right: 25px solid black;
+        border-image: url("../assets/rightborderlight.png") 20 stretch;
+    }
+
+    .mypredictions-cup-team-win {
+        font-size: 14px;
+        margin: 0 20px;
+        font-weight: bold;
+        padding-top: 2px;
+        color: white;
+        position: relative;
+        z-index: 1;
+    }
+
+    .mypredictions-cup-team-win:before {
+        background-color: var(--main-blue);
+        box-shadow: 10px 5px 25px #888888;
+        position: absolute;
+        z-index: -1;
+        width: 90%;
+        height: 60%;
+        top:20%;
+        left:6%;
+        content:"";
+    }
+
+    .mypredictions-cup-team-win:after {
+        position: absolute;
+        z-index: -1;
+        width: 80%;
+        height: 60%;
+        top:20%;
+        left:21%;
+        content:"";
+        border-right: 25px solid black;
+        border-image: url("../assets/rightborderblue.png") 20 stretch;
+    }
+}
+
+@media (max-width: 1200px) {
+    .mypredictions-cup-team {
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0 20px;
+        padding-top: 2px;
+        color: #171717;
+        position: relative;
+        z-index: 1;
+    }
+
+    .mypredictions-cup-team:before {
+        background-color: #fefef5;
+        box-shadow: 10px 5px 25px #888888;
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 60%;
+        top:20%;
+        content:"";
+    }
+
+
+    .mypredictions-cup-team-win {
+        font-size: 14px;
+        margin: 0 20px;
+        font-weight: bold;
+        padding-top: 2px;
+        color: white;
+        position: relative;
+        z-index: 1;
+    }
+
+    .mypredictions-cup-team-win:before {
+        background-color: var(--main-blue);
+        box-shadow: 10px 5px 25px #888888;
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 60%;
+        top:20%;
+        content:"";
+    }
+}
+
+@media (min-width: 1350px) {
+    .mypredictions-group-table-child {
+        font-size: 14px;
+        padding: 7px 10px;
+        border-left: 8px solid #b4a97b;
+        border-right: 8px solid #b4a97b;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1349px) {
+    .mypredictions-group-table-child {
+        font-size: 14px;
+        padding: 7px 10px;
+        border-left: 6px solid #b4a97b;
+        border-right: 6px solid #b4a97b;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 750px) {
+    .mypredictions-group-table-child {
+        font-size: 14px;
+        padding: 7px 10px;
+        border-left: 8px solid #b4a97b;
+        border-right: 8px solid #b4a97b;
+    }
+}
+
+@media (max-width: 749px) {
+    .mypredictions-group-table-child {
+        font-size: 14px;
+        padding: 7px 10px;
+        border-left: 6px solid #b4a97b;
+        border-right: 6px solid #b4a97b;
+    }
+}

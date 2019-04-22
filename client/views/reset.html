@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="row login-form mt-5">
+        <div class="col-12">
+            <h2>Odzyskiwania hasła</h2>
+        </div>
+    </div>
+    <form name="registerForm">
+        <div class="row login-form mt-5">
+            <div class="col-3 offset-3">
+                <span class="login-form-label">Nowe hasło:</span>
+                <input type="password" name="password" ng-model="password" ng-pattern="/^.{6,}$/" required>
+                <p class="form-alert" ng-show="validatePassword = registerForm.password.$error.required && registerForm.password.$touched">Wprowadź hasło</p>
+                <p class="form-alert" ng-show="validatePassword2 = registerForm.password.$error.pattern">Hasło musi mieć przynajmniej 6 znaków.</p>
+                <span class="login-form-label">Powtórz nowe hasło:</span>
+                <input type="password" name="rpassword" ng-model="rpassword" required>
+                <p class="form-alert" ng-show="validatePassword = registerForm.rpassword.$invalid && registerForm.rpassword.$touched">Wprowadź hasło</p>
+                <p class="form-alert" ng-show="samePassword()">Hasła nie są identyczne</p>
+                <button class="login-form-button" ng-click="submit()">Wyślij</button>
+            </div>
+    </form>
+    <div class="col-3 mt-5">
+        <p class="login-intro">Podaj swoje nowe hasło, które chcesz wykorzystywać do logowania się w serwisie!</p>
+    </div>
+</div>
+
+
+

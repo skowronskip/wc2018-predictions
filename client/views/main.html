@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="row mt-4">
+        <div class="col-8 offset-2">
+            <h1>Typer Mistrzostwa Świata 2018!</h1>
+            <h2>Pobaw się w typera i spróbuj przewidzieć jak potoczą się zbliżające Mistrzostwa Świata w Rosji!</h2>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-4 offset-2 pr-5">
+            <h2>Ostatnie 5 typów</h2>
+            <div class="row toplist-header">
+                <div class="col-2">Lp</div>
+                <div class="col-5">Login</div>
+                <div class="col-5"></div>
+             </div>
+            <div ng-repeat="value in last5predictions" class="row toplist-child">
+                <div class="col-2">{{$index + 1}}</div>
+                <div class="col-5"><a href="{{'http://' + hostname + '/user/' + value.username}}">{{value.username}}</a> </div>
+                <div class="col-5 text-right">{{ value.creationDate }}</div>
+            </div>
+         </div>
+        <div class="col-4 pl-5">
+            <h2>Najczęściej wybierani zwycięzcy</h2>
+            <div class="row toplist-header">
+                <div class="col-2">Lp</div>
+                <div class="col-8">Zwycięzca</div>
+                <div class="col-2">Ilość</div>
+            </div>
+            <div ng-repeat="value in topWinners" class="row toplist-child">
+                <div class="col-2">{{$index + 1}}</div>
+                <div class="col-8"><img class="allpredictions-flag" ng-src="../assets/flags/{{value.code}}.png">{{value.name}} </a> </div>
+                <div class="col-2">{{ value.occurences }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-8 offset-2">
+            <h1>Jak typować?</h1>
+            <h2>1. Zarejestruj się i aktywuj konto!<br>2. Zaloguj się i wejdź w zakłądkę 'Moje Typy'<br>3. Ustal jak według Ciebie przebiegną Mistrzostwa i udostępnij swoje typy!</h2>
+        </div>
+    </div>
+</div>

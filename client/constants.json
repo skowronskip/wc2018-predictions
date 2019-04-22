@@ -1,0 +1,233 @@
+{
+
+  "steps" : [
+    "A", "B", "C", "D", "E", "F", "G", "H", "1/8 Finału", "Ćwierćfinały", "Półfinały", "Mecz o 3. miejsce", "Finał"
+  ],
+
+  "nationalities" : [
+    {
+      "group": [
+        {
+          "code": "RUS",
+          "name": "Rosja",
+          "group": "A",
+          "chances": 35.00
+        },
+        {
+          "code": "SAU",
+          "name": "Arabia Saudyjska",
+          "group": "A",
+          "chances": 1300.00
+        },
+        {
+          "code": "EGY",
+          "name": "Egipt",
+          "group": "A",
+          "chances": 150.00
+        },
+        {
+          "code": "URY",
+          "name": "Urugwaj",
+          "group": "A",
+          "chances": 30.00
+        }
+      ]
+    },
+    {
+      "group": [
+        {
+          "code": "POR",
+          "name": "Portugalia",
+          "group": "B",
+          "chances": 25.00
+        },
+        {
+          "code": "ESP",
+          "name": "Hiszpania",
+          "group": "B",
+          "chances": 8.00
+        },
+        {
+          "code": "MAR",
+          "name": "Maroko",
+          "group": "B",
+          "chances": 400.00
+        },
+        {
+          "code": "IRN",
+          "name": "Iran",
+          "group": "B",
+          "chances": 500.00
+        }
+      ]
+    },
+    {
+      "group": [
+        {
+          "code": "FRA",
+          "name": "Francja",
+          "group": "C",
+          "chances": 6.50
+        },
+        {
+          "code": "AUS",
+          "name": "Australia",
+          "group": "C",
+          "chances": 201.00
+        },
+        {
+          "code": "PER",
+          "name": "Peru",
+          "group": "C",
+          "chances": 150.00
+        },
+        {
+          "code": "DNK",
+          "name": "Dania",
+          "group": "C",
+          "chances": 80.00
+        }
+      ]
+    },
+    {
+      "group": [
+        {
+          "code": "ARG",
+          "name": "Argentyna",
+          "group": "D",
+          "chances": 10.00
+        },
+        {
+          "code": "ISL",
+          "name": "Islandia",
+          "group": "D",
+          "chances": 200.00
+        },
+        {
+          "code": "HRV",
+          "name": "Chorwacja",
+          "group": "D",
+          "chances": 35.00
+        },
+        {
+          "code": "NGA",
+          "name": "Nigeria",
+          "group": "D",
+          "chances": 200.00
+        }
+      ]
+    },
+    {
+      "group": [
+        {
+          "code": "BRA",
+          "name": "Brazylia",
+          "group": "E",
+          "chances": 6.00
+        },
+        {
+          "code": "SUI",
+          "name": "Szwajcaria",
+          "group": "E",
+          "chances": 70.00
+        },
+        {
+          "code": "CRI",
+          "name": "Kostaryka",
+          "group": "E",
+          "chances": 500.00
+        },
+        {
+          "code": "SRB",
+          "name": "Serbia",
+          "group": "E",
+          "chances": 150.00
+        }
+      ]
+    },
+    {
+      "group": [
+        {
+          "code": "GER",
+          "name": "Niemcy",
+          "group": "F",
+          "chances": 5.50
+        },
+        {
+          "code": "MEX",
+          "name": "Meksyk",
+          "group": "F",
+          "chances": 100.00
+        },
+        {
+          "code": "SWE",
+          "name": "Szwecja",
+          "group": "F",
+          "chances": 100.00
+        },
+        {
+          "code": "KOR",
+          "name": "Korea Południowa",
+          "group": "F",
+          "chances": 700.00
+        }
+      ]
+    },
+    {
+      "group": [
+        {
+          "code": "BEL",
+          "name": "Belgia",
+          "group": "G",
+          "chances": 12.00
+        },
+        {
+          "code": "PAN",
+          "name": "Panama",
+          "group": "G",
+          "chances": 1300.00
+        },
+        {
+          "code": "TUN",
+          "name": "Tunezja",
+          "group": "G",
+          "chances": 500.00
+        },
+        {
+          "code": "ENG",
+          "name": "Anglia",
+          "group": "G",
+          "chances": 18.00
+        }
+      ]
+    },
+    {
+      "group": [
+        {
+          "code": "POL",
+          "name": "Polska",
+          "group": "H",
+          "chances": 40.00
+        },
+        {
+          "code": "SEN",
+          "name": "Senegal",
+          "group": "H",
+          "chances": 125.00
+        },
+        {
+          "code": "COL",
+          "name": "Kolumbia",
+          "group": "H",
+          "chances": 30.00
+        },
+        {
+          "code": "JPN",
+          "name": "Japonia",
+          "group": "H",
+          "chances": 250.00
+        }
+      ]
+    }
+  ]
+}

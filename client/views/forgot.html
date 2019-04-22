@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="row login-form mt-5">
+        <div class="col-12">
+            <h2>Odzyskiwania hasła</h2>
+        </div>
+    </div>
+    <form name="forgot">
+        <div class="row login-form mt-5">
+            <div class="col-3 offset-3">
+                <span class="login-form-label">E-mail:</span>
+                <input type="email" name="mail" ng-model="mail" required>
+                <p class="form-alert" ng-show="validateMail = forgot.mail.$invalid && forgot.mail.$touched">Podaj poprawny adres e-mail</p>
+
+                <button class="login-form-button" ng-click="submit()">Wyślij</button>
+            </div>
+    </form>
+    <div class="col-3 mt-3">
+        <p class="login-intro">Podaj nam swój adres e-mail który wykorzystałeś przy rejestracji!</p>
+        <p class="login-intro">Wyślemy do Ciebie link pozwalający na resetowanie hasła!</p>
+    </div>
+</div>
+

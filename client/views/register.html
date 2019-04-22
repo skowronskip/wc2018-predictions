@@ -1,0 +1,55 @@
+<div class="container-fluid">
+    <div class="row register-form mt-5 mb-5">
+        <div class="col-8 offset-2">
+            <h1> Użyj formularza rejestracyjnego aby założyć swoje konto!</h1>
+            <h2> Po rejestracji, będziesz mógł/a wytypować przebieg Mistrzostw Świata i włączyć się do rywalizacji ze znajomymi!</h2>
+        </div>
+    </div>
+    <form name="registerForm">
+        <div class="row register-form mt-5">
+            <div class="col-1 offset-2 register-form-label">
+                E-mail:
+            </div>
+            <div class="col-3">
+                <input type="email" name="email" ng-model="mail" required>
+                <p class="form-alert" ng-show="validateEmail = registerForm.email.$invalid && registerForm.email.$touched">Podaj poprawny adres e-mail</p><br>
+            </div>
+            <div class="col-1 register-form-label">
+                Login:
+            </div>
+            <div class="col-3">
+                <input type="login" name="login" ng-model="login" required>
+                <p class="form-alert" ng-show="validatePassword = registerForm.login.$invalid && registerForm.login.$touched">Wprowadź login</p>
+            </div>
+        </div>
+        <div class="row register-form mt-4">
+            <div class="col-1 offset-2 register-form-label">
+                Hasło:
+            </div>
+            <div class="col-3">
+                <input type="password" name="password" ng-model="password" ng-pattern="/^.{6,}$/" required>
+                <p class="form-alert" ng-show="validatePassword = registerForm.password.$error.required && registerForm.password.$touched">Wprowadź hasło</p>
+                <p class="form-alert" ng-show="validatePassword2 = registerForm.password.$error.pattern">Hasło musi mieć przynajmniej 6 znaków.</p>
+            </div>
+            <div class="col-1 register-form-label">
+                Powtórz hasło:
+            </div>
+            <div class="col-3">
+                <input type="password" name="rpassword" ng-model="rpassword" required>
+                <p class="form-alert" ng-show="validatePassword = registerForm.rpassword.$invalid && registerForm.rpassword.$touched">Wprowadź hasło</p>
+                <p class="form-alert" ng-show="samePassword()">Hasła nie są identyczne</p>
+            </div>
+        </div>
+        <div class="row register-form mt-5">
+            <div class="col-8 offset-2">
+                <input type="checkbox" name="policy" ng-model="policy"> Akceptuję, że po przez rejestrację w serwisie akceptuje <a href="/privacy">politykę prywatności.</a>
+                <p class="form-alert" ng-show="!policy && registerForm.policy.$touched">Akceptacja polityki prywatności jest wymagana.</p>
+            </div>
+        </div>
+        <div class="row register-form mt-5">
+            <div class="col-4 offset-4">
+                <p class="register-form-button" ng-click="submit()">Wyślij</p>
+            </div>
+        </div>
+    </form>
+</div>

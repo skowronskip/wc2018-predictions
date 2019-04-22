@@ -1,0 +1,93 @@
+<div class="container-fluid mb-5">
+    <div class="row mt-3">
+        <div class="col-12">
+            <h2>A Ty jak widzisz przebieg Mistrzostw?</h2>
+            <h2>Wprowadź swoje typy, zapisz, udostępniaj rywalizuj ze znajomymi!</h2>
+            <h2 ng-if="!cupStage">Wybierz drużyny od miejsca pierwszego do ostatniego!</h2>
+            <h2 ng-if="cupStage">Wybierz zwycięzce każdego meczu!</h2>
+        </div>
+    </div>
+    <div ng-if="groupPredictions.length === 8 && !cupStage" class="row cpredictions-group-table mt-5 cpredictions-button text-center">
+        <div class="col-12">
+            <button ng-click="groupStageDone()" ng-disabled="groupPredictions.length !== 8">Typuj dalej etap pucharowy!</button>
+        </div>
+    </div>
+    <div ng-if="!cupStage">
+        <div class="row mt-5">
+            <div class="col-12">
+                <h1> GRUPA {{steps[currentStep]}}</h1>
+            </div>
+        </div>
+        <div class="row cpredictions-group justify-content-center mt-3">
+            <div class="col-2" ng-repeat="national in currentNationalities">
+                <div class="col-12 cpredictions-group-button" ng-click="chooseNat(national)">
+                    <table width="100%">
+                        <tr>
+                            <td class="text-left" width="50%">{{national.name }}</td>
+                            <td class="text-right" width="50%">{{' Kurs: ' + national.chances}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row cpredictions-group-table mt-5">
+            <div class="col-6 offset-3">
+                <table>
+                    <tr>
+                        <td class="cpredictions-group-table-header" width="10%">Miejsce</td>
+                        <td class="cpredictions-group-table-header" width="60%">Nazwa</td>
+                        <td class="cpredictions-group-table-header" width="20%">Kurs</td>
+                    </tr>
+                    <tr ng-repeat="team in currentGroup">
+                        <td class="cpredictions-group-table-child">{{ team.place }}</td>
+                        <td class="cpredictions-group-table-child"><img class="cpredictions-flag" ng-src="../assets/flags/{{team.code}}.png">{{ team.name }}</td>
+                        <td class="cpredictions-group-table-child">{{ team.chances }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row cpredictions-group-table mt-5 cpredictions-button text-center">
+            <div class="col-8 offset-2">
+                <button ng-click="prevStep()">Poprzednia grupa</button>
+                <button ng-click="resetStep()">Zresetuj grupę</button>
+                <button ng-click="nextStep()" ng-disabled="currentNationalities.length">Zapisz grupę</button>
+            </div>
+        </div>
+    </div>
+    <div ng-if="cupStage">
+        <div class="row mt-5">
+            <div class="col-12">
+                <h1> {{steps[currentStep]}}</h1>
+            </div>
+        </div>
+        <div class="row cpredictions-cup mt-3">
+            <div ng-repeat="match in currentMatches" class="col-12 text-center">
+                <button ng-class="match[0].win ? 'cpredictions-cup-winner' : 'cpredictions-cup-team'" ng-click="pickWinner(match, 0)">
+                    <table width="100%">
+                        <tr>
+                            <td class="text-left" width="10%">{{match[0].place + match[0].group }}</td>
+                            <td class="text-left" width="60%"><img class="cpredictions-flag" ng-src="../assets/flags/{{match[0].code}}.png">{{match[0].name }}</td>
+                            <td class="text-right" width="30%">{{' Kurs: ' + match[0].chances}}</td>
+                        </tr>
+                    </table>
+                </button>
+                <span class="cpredictions-cup-vs">vs</span>
+                <button ng-class="match[1].win ? 'cpredictions-cup-winner' : 'cpredictions-cup-team'" ng-click="pickWinner(match, 1)">
+                    <table width="100%">
+                        <tr>
+                            <td class="text-left" width="10%">{{match[1].place + match[1].group }}</td>
+                            <td class="text-left" width="60%"><img class="cpredictions-flag" ng-src="../assets/flags/{{match[1].code}}.png">{{match[1].name }}</td>
+                            <td class="text-right" width="30%">{{' Kurs: ' + match[1].chances}}</td>
+                        </tr>
+                    </table>
+                </button>
+            </div>
+        </div>
+        <div class="row cpredictions-group-table mt-5 cpredictions-button text-center">
+            <div class="col-8 offset-2">
+                <button ng-click="prevCupStep()">Poprzedni etap</button>
+                <button ng-click="nextCupStep()" ng-disabled="!isNextCupStagePossible();">Zapisz etap</button>
+            </div>
+        </div>
+    </div>
+</div>

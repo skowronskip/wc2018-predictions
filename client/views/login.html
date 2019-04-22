@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="row login-form mt-5">
+        <div class="col-12">
+            <h2>Panel logowania</h2>
+        </div>
+    </div>
+    <form name="myForm">
+        <div class="row login-form mt-5">
+            <div class="col-3 offset-3">
+                <span class="login-form-label">Login:</span>
+                <input type="text" name="login" ng-model="login" required>
+                <p class="form-alert" ng-show="validateLogin = myForm.login.$invalid && myForm.login.$touched">Podaj login</p>
+                <span class="login-form-label">Hasło:</span>
+                <input type="password" name="password" ng-model="password" required>
+                <div ng-show="validatePassword = myForm.password.$invalid && myForm.password.$touched">Wypelnij hasło</div>
+                <a href="/forgot">Nie pamiętasz hasła?</a>
+                <button class="login-form-button" ng-click="submit()">Zaloguj się</button>
+            </div>
+    </form>
+    <div class="col-3 mt-5">
+        <p class="login-intro">Zaloguj się, abyś mógł/a przewidzieć jak potoczą się Mistrzostwa Świata 2018!</p>
+        <p class="login-intro">Wprowadź swoje typy po zalogowaniu i porównuj swoje wyniki ze znajomymi!</p>
+    </div>
+</div>
+
+
+

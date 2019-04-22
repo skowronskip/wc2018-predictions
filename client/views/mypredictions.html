@@ -1,0 +1,123 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6 offset-1 mt-5">
+            <h2>Udostępnij swoje typy znajomym już teraz kopiując link do swoich typów!</h2>
+        </div>
+        <div class="col-3 link-box">
+            <button ng-click="copied()" ngclipboard data-clipboard-text="{{'http://' + hostname + '/user/' + loggedUser.login}}">{{'http://' + hostname + '/user/' + loggedUser.login}}</button>
+        </div>
+    </div>
+    <div class="row mt-5 justify-content-center">
+        <div class="col-11">
+            <div class="row">
+                <div class="col-3"><h2>1/8 finału</h2></div>
+                <div class="col-3"><h2>Ćwierćfinały</h2></div>
+                <div class="col-3"><h2>Półfinały</h2></div>
+                <div class="col-3"><h2>Finał</h2></div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-11">
+            <div class="row">
+                <div class="col-3">
+                    <div ng-repeat="match in cupStage[0]" class="row mt-4 text-uppercase">
+                        <div class="col-12">
+                            <div ng-repeat="team in match" ng-class="team.win ? 'row mypredictions-cup-team-win' : 'row mypredictions-cup-team'">
+                                <div class="col-12 p-0">
+                                    <img class="mypredictions-flag-b" ng-src="../assets/flags/{{team.code}}.png">{{team.name}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 mypredictions-cup-quater">
+                    <div ng-repeat="match in cupStage[1]" class="row mypredictions-cup-quater2 text-uppercase">
+                        <div class="col-12">
+                            <div ng-repeat="team in match" ng-class="team.win ? 'row mypredictions-cup-team-win' : 'row mypredictions-cup-team'">
+                                <div class="col-12 p-0">
+                                    <img class="mypredictions-flag-b" ng-src="../assets/flags/{{team.code}}.png">{{team.name}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 mypredictions-cup-semi">
+                    <div ng-repeat="match in cupStage[2]" class="row mypredictions-cup-semi2 text-uppercase">
+                        <div class="col-12">
+                            <div ng-repeat="team in match" ng-class="team.win ? 'row mypredictions-cup-team-win' : 'row mypredictions-cup-team'">
+                                <div class="col-12 p-0">
+                                    <img class="mypredictions-flag-b" ng-src="../assets/flags/{{team.code}}.png">{{team.name}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 mypredictions-cup-final">
+                    <div ng-repeat="match in cupStage[4]" class="row text-uppercase">
+                        <div class="col-12">
+                            <div ng-repeat="team in match" ng-class="team.win ? 'row mypredictions-cup-team-win' : 'row mypredictions-cup-team'">
+                                <div class="col-12 p-0">
+                                    <img class="mypredictions-flag-b" ng-src="../assets/flags/{{team.code}}.png">{{team.name}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-repeat="match in cupStage[3]" class="row text-uppercase">
+                        <div class="col-12 mypredictions-cup-semi">
+                            <h2>Mecz o 3. miejsce</h2>
+                            <div ng-repeat="team in match" ng-class="team.win ? 'row mypredictions-cup-team-win' : 'row mypredictions-cup-team'">
+                                <div class="col-12 p-0">
+                                    <img class="mypredictions-flag-b" ng-src="../assets/flags/{{team.code}}.png">{{team.name}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mypredictions-page mypredictions-minus">
+        <div class="col-12">
+            <p class="mypredictions-group-title text-center">FAZA GRUPOWA</p>
+        </div>
+    </div>
+    <div class="row mypredictions-page justify-content-center">
+        <div class="col-11">
+            <div class="row">
+                <div ng-repeat="group in groups" class="col-6 col-lg-3 mypredictions-group-table">
+                    <div class="row mypredictions-group-name">
+                        <div class="col-12">
+                            GRUPA {{group[0].group}}
+                        </div>
+                    </div>
+                    <div class="row mypredictions-group-table-header">
+                        <div class="col-2">Msc</div>
+                        <div class="col-8">Nazwa</div>
+                        <div class="col-2">Kurs</div>
+                    </div>
+                    <div ng-repeat="team in group" ng-class="team.place === 1 ? 'row mypredictions-group-table-child pt-3' : 'row mypredictions-group-table-child'">
+                        <div class="col-2"><span ng-if="team.place === 1 || team.place === 2"><strong>{{ team.place }}</strong></span>
+                            <span ng-if="team.place !== 1 && team.place !== 2">{{ team.place }}</span></div>
+                        <div class="col-8"><img class="mypredictions-flag" ng-src="../assets/flags/{{team.code}}.png">
+                            <span ng-if="team.place === 1 || team.place === 2"><strong>{{ team.name }}</strong></span>
+                            <span ng-if="team.place !== 1 && team.place !== 2">{{ team.name }}</span>
+                            <span class="points" ng-if="team.points > 0"><strong>   + {{team.points}} pkt.</strong></span>
+                        </div>
+                        <div class="col-2"><span ng-if="team.place === 1 || team.place === 2"><strong>{{ team.chances }}</strong></span>
+                            <span ng-if="team.place !== 1 && team.place !== 2">{{ team.chances }}</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mypredictions-group-bottom p-0">
+                            <img src="../assets/groupbottom.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
